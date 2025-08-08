@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bıçak Kaplama ROI Hesaplayıcı</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="logo-container">
+      <img src="https://www.konveyorbant.com/wp-content/themes/ayik-band/assets/image/logo/logo2.svg" alt="Ayık Band Logo" class="logo" />
+    </div>
+    <h1>Bıçak Kaplama Yatırımın Geri Dönüşü Hesaplayıcı</h1>
+
+    <div class="form-section">
+      <div class="input-group">
+        <label>Yeni Bıçak Maliyeti (€)</label>
+        <input type="number" id="costNewBlade" value="1000" />
+      </div>
+
+      <div class="input-group">
+        <label>Bıçak Başına Wear Guard Miktarı (kg)</label>
+        <input type="number" id="epoxyAmountPerBlade" value="0.5" step="0.1"/>
+      </div>
+
+      <div class="input-group">
+        <label>Wear Guard Birim Fiyatı (€/kg)</label>
+        <input type="number" id="epoxyUnitPrice" value="800" />
+      </div>
+
+      <div class="input-group">
+        <label>Kaplama Servis Bedeli (€/bıçak)</label>
+        <input type="number" id="serviceCostPerBlade" value="150" />
+      </div>
+
+      <div class="input-group">
+        <label>Kaplamasız Bıçak Ömrü (gün)</label>
+        <input type="number" id="bladeLifespanDays" value="14" />
+      </div>
+
+      <div class="input-group">
+        <label>Toplam Operasyon Süresi (gün)</label>
+        <input type="number" id="operationDurationDays" value="180" />
+      </div>
+
+      <div class="input-group">
+        <label>Kullanılan Bıçak Sayısı</label>
+        <input type="number" id="numberOfBlades" value="20" />
+      </div>
+
+      <button onclick="calculateCosts()">Hesapla</button>
+    </div>
+
+    <div class="chart-section">
+      <canvas id="costChart"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
