@@ -76,7 +76,7 @@ function calculateCosts() {
         y: {
           title: {
             display: true,
-            text: "Maliyet (₺)"
+            text: "Maliyet (€)"
           }
         },
         x: {
